@@ -24,7 +24,7 @@ def read_graphs_from_file(filename: str) -> [Graph, Graph]:
 def run(filename: str):
     [graph1, graph2] = read_graphs_from_file(filename)
     print(graph1, graph2)
-    print(exact_distance(graph1, graph2))
+    print("exact distance: ", exact_distance(graph1, graph2))
     print(aprox_distance(graph1, graph2))
 
 
