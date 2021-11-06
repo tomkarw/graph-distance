@@ -23,7 +23,6 @@ $ python3 graph-distance.py --random 5 --exact
 exact distance:  0
 
 $ python3 graph-distance.py --random 7 --approximate
-exact distance:  0
 approximate distance:  8
 
 $ python3 graph-distance.py --file examples/graph0.txt

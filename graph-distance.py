@@ -46,7 +46,7 @@ def run(arguments):
         print("either --file or --random must be passed")
         return
 
-    if not arguments.exact or arguments.approximate:
+    if not (arguments.exact or arguments.approximate):
         arguments.exact = True
         arguments.approximate = True
 
@@ -59,7 +59,7 @@ def run(arguments):
 parser = argparse.ArgumentParser(description="Calculate distance between two graphs.")
 parser.add_argument("--exact", action="store_true", help="calculate exact distance (O(n!) time complexity)")
 parser.add_argument("--approximate", action="store_true", help="calculate approximate distance (O(n^2) time complexity)")
-parser.add_argument("--file", type=str, help="read graphs from file")
+parser.add_argument("--file", type=str, help="read graphs from file (see examples/ for input format)")
 parser.add_argument("--random", type=int, metavar='SIZE', help="generate random isomorphic graphs")
 
 
