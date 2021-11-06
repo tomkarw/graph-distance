@@ -1,5 +1,5 @@
+#! /bin/python3
 import argparse
-import sys
 import numpy as np
 from graph import Graph
 from distance import exact_distance, aprox_distance
@@ -23,18 +23,6 @@ def read_graphs_from_file(filename: str) -> [Graph, Graph]:
     return [graph1, graph2]
 
 
-def run_from_file(filename: str):
-    [graph1, graph2] = read_graphs_from_file(filename)
-    print("exact distance: ", exact_distance(graph1, graph2))
-    print("aprox distance: ", aprox_distance(graph1, graph2))
-
-
-def run_random(n):
-    graph1 = Graph(size=n)
-    graph1.matrix = np.random.randint(2, size=(n, n))
-    graph2 = graph1.random_permutation()
-
-
 def run(arguments):
     if file_name := arguments.file:
         [graph1, graph2] = read_graphs_from_file(file_name)
@@ -43,7 +31,7 @@ def run(arguments):
         graph1.matrix = np.random.randint(2, size=(n, n))
         graph2 = graph1.random_permutation()
     else:
-        print("either --file or --random must be passed")
+        print("either --file or --random flag must be passed")
         return
 
     if not (arguments.exact or arguments.approximate):
