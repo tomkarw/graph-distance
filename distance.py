@@ -63,13 +63,30 @@ def sort_vertices_by_degree(graph: Graph) -> Graph:
     Renumber the graph vertices by their degree descending
     """
     degrees = [sum(row) for row in graph.matrix]
-    ...
+    # Traverse through all array elements
+    for i in range(graph.matrix.shape[0]):
+        # Find the minimum element in remaining
+        # unsorted array
+        min_idx = i
+        for j in range(i + 1, len(degrees)):
+            if degrees[min_idx] > degrees[j]:
+                min_idx = j
+
+        # Swap the found minimum element with
+        # the first element
+        degrees[i], degrees[min_idx] = degrees[min_idx], degrees[i]
+        # swap rows
+        graph.matrix[[min_idx, i], :] = graph.matrix[[i, min_idx], :]
+        # swap columns
+        graph.matrix[:, [min_idx, i]] = graph.matrix[:, [i, min_idx]]
+
+    return graph
 
 
 def aprox_distance(g1: Graph, g2: Graph):
     g1, g2 = order_graphs(g1, g2)
     g1 = sort_vertices_by_degree(g1)
     g2 = sort_vertices_by_degree(g2)
-    g2 = extend_graph(g2, g1)
+    g1 = extend_graph(g1, g2)
     return calculate_distance(g1, g2)
 
