@@ -10,7 +10,7 @@ def order_graphs(g1: Graph, g2: Graph) -> (Graph, Graph):
 def calculate_distance(g1: Graph, g2: Graph) -> int:
     """Calculates distance between two Graphs"""
     assert g1.size == g2.size, "Graphs must have same size"
-    return sum(sum(abs(g1.matrix - g2.matrix)))
+    return np.sum(abs(g1.matrix - g2.matrix))
 
 
 def extend_graph(g1: Graph, g2: Graph) -> Graph:
@@ -22,8 +22,9 @@ def extend_graph(g1: Graph, g2: Graph) -> Graph:
     assert g1.size <= g2.size
     graph = Graph(size=g2.size)
     graph.matrix = g2.matrix.copy()
-    graph.matrix[[g1.size, g2.size - 1], :] = 1 ^ g2.matrix[[g1.size, g2.size - 1], :]
-    graph.matrix[:, [g1.size, g2.size - 1]] = 1 ^ g2.matrix[:, [g1.size, g2.size - 1]]
+    graph.matrix[0: g1.size, 0: g1.size] = g1.matrix
+    graph.matrix[g1.size: g2.size, :] = 1 ^ g2.matrix[g1.size: g2.size, :]
+    graph.matrix[:, g1.size: g2.size] = 1 ^ g2.matrix[:, g1.size: g2.size]
     return graph
 
 
@@ -89,4 +90,3 @@ def aprox_distance(g1: Graph, g2: Graph):
     g2 = sort_vertices_by_degree(g2)
     g1 = extend_graph(g1, g2)
     return calculate_distance(g1, g2)
-
