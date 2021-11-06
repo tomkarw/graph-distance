@@ -1,4 +1,5 @@
 import sys
+import numpy as np
 from graph import Graph
 from distance import exact_distance, aprox_distance
 
@@ -27,6 +28,14 @@ def run(filename: str):
     print("aprox distance: ", aprox_distance(graph1, graph2))
 
 
+def run_random(n):
+    graph1 = Graph(size=n)
+    graph1.matrix = np.random.randint(2, size=(n, n))
+    graph2 = graph1.random_permutation()
+    print("exact distance: ", exact_distance(graph1, graph2))
+    print("aprox distance: ", aprox_distance(graph1, graph2))
+
+
 if __name__ == "__main__":
     filename = sys.argv[1]
-    run(filename)
+    run_random(9)

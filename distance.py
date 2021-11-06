@@ -10,7 +10,7 @@ def order_graphs(g1: Graph, g2: Graph) -> (Graph, Graph):
 def calculate_distance(g1: Graph, g2: Graph) -> int:
     """Calculates distance between two Graphs"""
     assert g1.size == g2.size, "Graphs must have same size"
-    return np.sum(abs(g1.matrix - g2.matrix))
+    return np.sum(g1.matrix ^ g2.matrix)
 
 
 def extend_graph(g1: Graph, g2: Graph) -> Graph:
@@ -32,8 +32,10 @@ def permutations(graph: Graph, step=0) -> [Graph]:
     """
     Return all possible vertex orderings of a graph
     """
-    yield graph
-    for i in range(step + 1, graph.size):
+    if step == graph.size:
+        yield graph
+
+    for i in range(step, graph.size):
         # swap rows
         graph.matrix[[step, i], :] = graph.matrix[[i, step], :]
         # swap columns
