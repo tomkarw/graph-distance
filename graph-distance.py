@@ -29,12 +29,12 @@ def run(arguments):
 
 
 parser = argparse.ArgumentParser(description="Calculate distance between two graphs.")
-parser.add_argument("--exact", action="store_true", help="calculate exact distance (O(n!) time complexity)")
-parser.add_argument("--approximate", action="store_true", help="calculate approximate distance (O(n^2) time complexity)")
+parser.add_argument("-e", "--exact", action="store_true", help="calculate exact distance (O(n!) time complexity)")
+parser.add_argument("-a", "--approximate", action="store_true", help="calculate approximate distance (O(n^2) time complexity)")
 parser.add_argument("-o", "--output", type=str, metavar='OUTPUT-FILE', help="save generated graphs to file")
 group = parser.add_mutually_exclusive_group(required=True)
-group.add_argument("--file", type=str, metavar="INPUT-FILE", help="read graphs from file (see examples/ for input format)")
-group.add_argument("--random", type=int, metavar='SIZE', help="generate random isomorphic graphs")
+group.add_argument("-f", "--file", type=str, metavar="INPUT-FILE", help="read graphs from file (see examples/ for input format)")
+group.add_argument("-r", "--random", type=int, metavar='SIZE', help="generate random isomorphic graphs")
 
 
 if __name__ == "__main__":
