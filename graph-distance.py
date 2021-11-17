@@ -27,13 +27,16 @@ def run(arguments):
     if arguments.output:
         write_graphs_to_file(graph1, graph2, filename=arguments.output)
 
+INPUT_FILE_METAVAR = "INPUT-FILE"
+INPUT_FILE_HELP = "read graphs from file (see examples/ for input format)"
 
 parser = argparse.ArgumentParser(description="Calculate distance between two graphs.")
 parser.add_argument("-e", "--exact", action="store_true", help="calculate exact distance (O(n!) time complexity)")
 parser.add_argument("-a", "--approximate", action="store_true", help="calculate approximate distance (O(n^2) time complexity)")
 parser.add_argument("-o", "--output", type=str, metavar='OUTPUT-FILE', help="save generated graphs to file")
 group = parser.add_mutually_exclusive_group(required=True)
-group.add_argument("-f", "--file", type=str, metavar="INPUT-FILE", help="read graphs from file (see examples/ for input format)")
+group.add_argument("file", metavar=INPUT_FILE_METAVAR, help=INPUT_FILE_HELP, nargs="?")
+group.add_argument("-f", "--file", type=str, metavar="INPUT-FILE", help=INPUT_FILE_HELP)
 group.add_argument("-r", "--random", type=int, metavar='SIZE', help="generate random isomorphic graphs")
 
 
