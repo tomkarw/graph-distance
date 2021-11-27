@@ -47,27 +47,39 @@ optional arguments:
 # Examples:
 ```
 $ python3 graph-distance.py examples/graph-n5-0.txt
-exact distance:  0
-approximate distance: 4
+APPROXIMATE DISTANCE
+Input matrices
+1 0 1 0 0     1 0 1 0 0
+1 0 1 1 0     0 1 0 0 1
+1 0 0 0 1     0 1 1 0 0
+1 0 0 1 0     0 1 1 0 1
+0 0 0 1 1     1 1 0 0 0
+After modification
+1 0 1 0 0     1 1 0 0 0
+0 1 0 1 0     1 0 0 1 0
+0 1 1 0 0     1 0 1 0 0
+1 1 0 0 0     0 0 1 1 0
+0 1 1 1 0     1 1 1 0 0
+approximate distance:  12
 
-$ python3 graph-distance.py --random 5
+$ python3 graph-distance.py --random 5 -q --exact --approximate
 exact distance:  0
 approximate distance:  8
 
-$ python3 graph-distance.py --random 5 --exact
+$ python3 graph-distance.py --random 5 --exact -q
 exact distance:  0
 
-$ python3 graph-distance.py --random 7 --approximate
+$ python3 graph-distance.py --random 7 --approximate -q
 approximate distance:  8
 
 $ # this will require confirmation
-$ python3 graph-distance.py --random 8
+$ python3 graph-distance.py --random 8 -q
 Are you sure you want to calculate exact distance of graph size 8? [y/n] y
 exact distance:  0
 approximate distance: 30 
 
 $ # save generated graph to file after calculations
-$ python3 graph-distane.py --random 1000 --approximate -o graph-n1000.txt
+$ python3 graph-distane.py --random 1000 --approximate -o graph-n1000.txt -q
 approximate distance: 495038
 ```
 
