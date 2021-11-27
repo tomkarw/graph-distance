@@ -73,4 +73,10 @@ def write_graphs_to_file(graph1: Graph, graph2: Graph, filename: str):
             file_handle.write("\n")
 
 def print_graphs(graph1: Graph, graph2: Graph):
-    pass
+    for i in range(max(graph1.size, graph2.size)):
+        if i < graph1.size:
+            print(" ".join(map(lambda cell: str(int(cell)), graph1.matrix[i])), end="     ")
+        if i < graph2.size:
+            print(" ".join(map(lambda cell: str(int(cell)), graph2.matrix[i])), end="")
+        print()
+            

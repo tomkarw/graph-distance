@@ -50,6 +50,7 @@ def permutations(graph: Graph, step=0) -> [Graph]:
 def exact_distance(g1: Graph, g2: Graph):
     g1, g2 = order_graphs(g1, g2)
     shortest_distance = g2.size ** 2
+    shortest_graph = g1
     # this has O(n!) complexity
     for graph in permutations(g1):
         graph = extend_graph(graph, g2)
@@ -57,8 +58,9 @@ def exact_distance(g1: Graph, g2: Graph):
         permutation_distance = calculate_distance(graph, g2)
         if permutation_distance < shortest_distance:
             shortest_distance = permutation_distance
+            shortest_graph = graph
 
-    return shortest_distance
+    return shortest_distance, shortest_graph, g2
 
 
 def sort_vertices_by_degree(graph: Graph) -> Graph:
@@ -86,9 +88,10 @@ def sort_vertices_by_degree(graph: Graph) -> Graph:
     return graph
 
 
-def aprox_distance(g1: Graph, g2: Graph):
+def approx_distance(g1: Graph, g2: Graph):
     g1, g2 = order_graphs(g1, g2)
     g1 = sort_vertices_by_degree(g1)
     g2 = sort_vertices_by_degree(g2)
     g1 = extend_graph(g1, g2)
-    return calculate_distance(g1, g2)
+    return calculate_distance(g1, g2), g1, g2
+

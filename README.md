@@ -39,6 +39,7 @@ optional arguments:
   -o OUTPUT-FILE, --output OUTPUT-FILE
                         save generated graphs to file
   -y                    skip confirmations
+  -q, --quiet           don't print graphs
   -r SIZE, --random SIZE
                         generate random isomorphic graphs
 ```
