@@ -8,7 +8,12 @@ GRAPH_SIZE_THRESHOLD = 7
 
 def run(arguments):
     if file_name := arguments.file:
-        [graph1, graph2] = read_graphs_from_file(file_name)
+        try:
+            [graph1, graph2] = read_graphs_from_file(file_name)
+        except:
+            print(f"Error: failed reading graphs from file, is the file name '{file_name}' correct?")
+            exit(1)
+
     elif n := arguments.random:
         graph1 = Graph(size=n)
         graph1.matrix = np.random.randint(2, size=(n, n))
