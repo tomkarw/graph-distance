@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 import argparse
+import copy
 import numpy as np
 from graph import Graph, read_graphs_from_file, write_graphs_to_file, print_graphs
 from distance import exact_distance, approx_distance
@@ -36,10 +38,10 @@ def run(arguments):
                 print("EXACT DISTANCE")
                 print("Input matrices")
                 print_graphs(graph1, graph2)
-            distance, graph1, graph2 = exact_distance(graph1, graph2)
+            distance, graph1_changed, graph2_changed = exact_distance(graph1, graph2)
             if not arguments.quiet:
                 print("After modification")
-                print_graphs(graph1, graph2)
+                print_graphs(graph1_changed, graph2_changed)
             print("exact distance: ", distance)
 
     if arguments.approximate:
@@ -47,10 +49,10 @@ def run(arguments):
             print("APPROXIMATE DISTANCE")
             print("Input matrices")
             print_graphs(graph1, graph2)
-        distance, graph1, graph2 = approx_distance(graph1, graph2)
+        distance, graph1_changed, graph2_changed = approx_distance(graph1, graph2)
         if not arguments.quiet:
             print("After modification")
-            print_graphs(graph1, graph2)
+            print_graphs(graph1_changed, graph2_changed)
         print("approximate distance: ", distance)
 
     if arguments.output:
@@ -70,3 +72,4 @@ group.add_argument("-r", "--random", type=int, metavar='SIZE', help="generate ra
 if __name__ == "__main__":
     args = parser.parse_args()
     run(args)
+
