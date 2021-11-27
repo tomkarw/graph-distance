@@ -1,0 +1,88 @@
+2
+exact distance:  1
+approximate distance:  3
+exact distance:  2
+approximate distance:  2
+exact distance:  1
+approximate distance:  1
+exact distance:  1
+approximate distance:  1
+exact distance:  2
+approximate distance:  2
+3
+exact distance:  1
+approximate distance:  1
+exact distance:  1
+approximate distance:  1
+exact distance:  2
+approximate distance:  2
+exact distance:  3
+approximate distance:  3
+exact distance:  1
+approximate distance:  1
+4
+exact distance:  2
+approximate distance:  2
+exact distance:  2
+approximate distance:  2
+exact distance:  2
+approximate distance:  8
+exact distance:  2
+approximate distance:  2
+exact distance:  3
+approximate distance:  7
+5
+exact distance:  4
+approximate distance:  8
+exact distance:  3
+approximate distance:  5
+exact distance:  2
+approximate distance:  4
+exact distance:  2
+approximate distance:  10
+exact distance:  1
+approximate distance:  11
+6
+exact distance:  6
+approximate distance:  14
+exact distance:  4
+approximate distance:  12
+exact distance:  3
+approximate distance:  17
+exact distance:  2
+approximate distance:  10
+exact distance:  3
+approximate distance:  7
+7
+exact distance:  5
+approximate distance:  23
+exact distance:  3
+approximate distance:  11
+exact distance:  1
+approximate distance:  11
+exact distance:  3
+approximate distance:  7
+exact distance:  2
+approximate distance:  16
+8
+exact distance:  3
+approximate distance:  11
+exact distance:  3
+approximate distance:  3
+exact distance:  3
+approximate distance:  27
+exact distance:  1
+approximate distance:  27
+exact distance:  3
+approximate distance:  15
+9
+exact distance:  2
+approximate distance:  32
+exact distance:  8
+approximate distance:  24
+exact distance:  3
+approximate distance:  33
+exact distance:  2
+approximate distance:  14
+exact distance:  1
+approximate distance:  15

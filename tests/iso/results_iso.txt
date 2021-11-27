@@ -5,80 +5,80 @@ approximate distance:  0
 approximate distance:  0
 approximate distance:  0
 3
-approximate distance:  0
 approximate distance:  4
-approximate distance:  6
+approximate distance:  0
+approximate distance:  0
 approximate distance:  0
 approximate distance:  0
 4
 approximate distance:  6
-approximate distance:  10
+approximate distance:  6
 approximate distance:  0
-approximate distance:  0
-approximate distance:  0
-5
-approximate distance:  10
 approximate distance:  4
+approximate distance:  10
+5
+approximate distance:  0
+approximate distance:  6
 approximate distance:  0
 approximate distance:  0
 approximate distance:  0
 6
-approximate distance:  14
-approximate distance:  0
-approximate distance:  22
-approximate distance:  16
 approximate distance:  18
-7
+approximate distance:  12
+approximate distance:  4
 approximate distance:  0
+approximate distance:  0
+7
+approximate distance:  14
 approximate distance:  10
-approximate distance:  10
-approximate distance:  10
-approximate distance:  10
+approximate distance:  4
+approximate distance:  16
+approximate distance:  12
 8
-approximate distance:  30
+approximate distance:  18
+approximate distance:  26
+approximate distance:  32
 approximate distance:  22
 approximate distance:  16
-approximate distance:  28
-approximate distance:  24
 9
-approximate distance:  0
-approximate distance:  16
-approximate distance:  34
-approximate distance:  16
-approximate distance:  34
-10
-approximate distance:  36
-approximate distance:  44
-approximate distance:  24
-approximate distance:  32
-approximate distance:  26
-11
-approximate distance:  26
-approximate distance:  50
-approximate distance:  14
-approximate distance:  46
 approximate distance:  40
+approximate distance:  34
+approximate distance:  30
+approximate distance:  32
+approximate distance:  32
+10
+approximate distance:  0
+approximate distance:  34
+approximate distance:  36
+approximate distance:  32
+approximate distance:  18
+11
+approximate distance:  38
+approximate distance:  58
+approximate distance:  46
+approximate distance:  32
+approximate distance:  34
 12
 approximate distance:  50
-approximate distance:  54
-approximate distance:  44
-approximate distance:  66
-approximate distance:  50
-13
-approximate distance:  58
-approximate distance:  30
+approximate distance:  52
 approximate distance:  62
-approximate distance:  44
-approximate distance:  56
-14
-approximate distance:  88
-approximate distance:  76
-approximate distance:  84
-approximate distance:  84
-approximate distance:  50
-15
+approximate distance:  64
 approximate distance:  54
-approximate distance:  88
+13
+approximate distance:  68
+approximate distance:  54
+approximate distance:  72
+approximate distance:  52
+approximate distance:  48
+14
+approximate distance:  50
+approximate distance:  68
+approximate distance:  64
+approximate distance:  70
+approximate distance:  68
+15
+approximate distance:  114
 approximate distance:  100
-approximate distance:  108
-approximate distance:  94
+approximate distance:  80
+approximate distance:  80
+approximate distance:  84
