@@ -28,6 +28,9 @@ usage: graph-distance.py [-h] [-e] [-a] [-o OUTPUT-FILE]
 
 Calculate the distance between the two graphs.
 
+positional arguments:
+  INPUT_FILE            read graphs from file (see examples/ for input format)
+
 optional arguments:
   -h, --help            show this help message and exit
   -e, --exact           calculate exact distance (O(n!) time complexity)
@@ -35,15 +38,14 @@ optional arguments:
                         complexity)
   -o OUTPUT-FILE, --output OUTPUT-FILE
                         save generated graphs to file
-  -f INPUT-FILE, --file INPUT-FILE
-                        read graphs from file (see examples/ for input format)
+  -y                    skip confirmations
   -r SIZE, --random SIZE
                         generate random isomorphic graphs
 ```
 
 # Examples:
 ```
-$ python3 graph-distance.py ./examples/graph-n5-0.txt
+$ python3 graph-distance.py examples/graph-n5-0.txt
 exact distance:  0
 approximate distance: 4
 
@@ -57,9 +59,11 @@ exact distance:  0
 $ python3 graph-distance.py --random 7 --approximate
 approximate distance:  8
 
-$ python3 graph-distance.py --file examples/graph0.txt
+$ # this will require confirmation
+$ python3 graph-distance.py --random 8
+Are you sure you want to calculate exact distance of graph size 8? [y/n] y
 exact distance:  0
-approximate distance:  6
+approximate distance: 30 
 
 $ # save generated graph to file after calculations
 $ python3 graph-distane.py --random 1000 --approximate -o graph-n1000.txt
