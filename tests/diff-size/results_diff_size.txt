@@ -1,0 +1,99 @@
+6-5
+exact distance:  11
+approximate distance:  17
+exact distance:  16
+approximate distance:  16
+exact distance:  15
+approximate distance:  15
+exact distance:  17
+approximate distance:  25
+exact distance:  16
+approximate distance:  22
+6-4
+exact distance:  24
+approximate distance:  26
+exact distance:  23
+approximate distance:  23
+exact distance:  21
+approximate distance:  27
+exact distance:  24
+approximate distance:  28
+exact distance:  20
+approximate distance:  20
+6-3
+exact distance:  28
+approximate distance:  34
+exact distance:  27
+approximate distance:  27
+exact distance:  28
+approximate distance:  28
+exact distance:  30
+approximate distance:  30
+exact distance:  31
+approximate distance:  33
+7-6
+exact distance:  20
+approximate distance:  24
+exact distance:  18
+approximate distance:  28
+exact distance:  22
+approximate distance:  30
+exact distance:  20
+approximate distance:  26
+exact distance:  21
+approximate distance:  25
+7-5
+exact distance:  25
+approximate distance:  25
+exact distance:  31
+approximate distance:  35
+exact distance:  32
+approximate distance:  32
+exact distance:  29
+approximate distance:  35
+exact distance:  33
+approximate distance:  35
+7-4
+exact distance:  33
+approximate distance:  39
+exact distance:  36
+approximate distance:  38
+exact distance:  37
+approximate distance:  37
+exact distance:  35
+approximate distance:  39
+exact distance:  36
+approximate distance:  40
+8-7
+exact distance:  22
+approximate distance:  30
+exact distance:  26
+approximate distance:  34
+exact distance:  24
+approximate distance:  32
+exact distance:  27
+approximate distance:  29
+exact distance:  24
+approximate distance:  36
+8-6
+exact distance:  35
+approximate distance:  41
+exact distance:  35
+approximate distance:  47
+exact distance:  37
+approximate distance:  41
+exact distance:  34
+approximate distance:  44
+exact distance:  35
+approximate distance:  35
+8-5
+exact distance:  39
+approximate distance:  39
+exact distance:  39
+approximate distance:  43
+exact distance:  44
+approximate distance:  50
+exact distance:  46
+approximate distance:  52
+exact distance:  45
+approximate distance:  51
